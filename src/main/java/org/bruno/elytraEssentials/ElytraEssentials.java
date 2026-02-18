@@ -38,7 +38,6 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bstats.bukkit.Metrics;
 
 import java.util.Objects;
 import java.util.logging.Level;
@@ -224,7 +223,7 @@ public final class ElytraEssentials extends JavaPlugin {
     }
 
     private void setupIntegrations() {
-        new Metrics(this, Constants.Integrations.BSTATS_ID);
+        // bStats is disabled in this Gradle build path due to Shadow/Gradle 9 relocation incompatibility.
         updaterHandler.performCheck();
     }
 
